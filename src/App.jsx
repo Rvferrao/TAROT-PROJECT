@@ -36,7 +36,7 @@ export const App = () => {
       <div className="flex justify-center items-center font-bold text-[38px]">
         <h1>TAROT GAME</h1>
       </div>
-      <main className="grid grid-cols-3 gap-2 p-2">
+      <main className="grid grid-cols-3 gap-2 p-4">
         {card != undefined &&
           card.cards.map((card, index) => {
             return <Card card={card} key={index} />;

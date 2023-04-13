@@ -15,7 +15,7 @@ export const Card = ({ card, shown }) => {
           <img
             className="w-[140px] h-[280px]"
             src={card.imageFront}
-            alt={"card " + card.name}
+            alt={"carta: " + card.name.toLowerCase()}
           />
           <div></div>
         </div>

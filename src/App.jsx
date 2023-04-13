@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Card } from "./components/Card";
 import axios from "axios";
 import { Button } from "./components/Button";
 
 export const App = () => {
   const [card, setCard] = useState();
+  const [shown, setShown] = useState(false);
 
   useEffect(() => {
     handleRequest();
@@ -30,8 +31,8 @@ export const App = () => {
       });
   };
 
-  const handleMessage = () => {
-    alert("click");
+  const handleControlCard = () => {
+    setShown(!shown);
   };
 
   return (
@@ -39,14 +40,14 @@ export const App = () => {
       <div className="flex flex-col justify-center items-center font-bold text-[38px]">
         <h1>TAROT GAME</h1>
         <div>
-          <Button label="Start" value={handleMessage} />
+          <Button label={shown ? "Pause" : "Start"} value={handleControlCard} />
         </div>
       </div>
       <div className="flex justify-center items-center p-4">
-        <main className="grid grid-cols-2 md:grid-cols-4 md:gap-4 lg:grid-cols-5">
+        <main className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
           {card != undefined &&
             card.cards.map((card, index) => {
-              return <Card card={card} key={index} />;
+              return <Card card={card} key={index} shown={shown} />;
             })}
         </main>
       </div>

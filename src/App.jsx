@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "./components/Card";
 import axios from "axios";
+import { Button } from "./components/Button";
 
 export const App = () => {
   const [card, setCard] = useState();
@@ -29,19 +30,26 @@ export const App = () => {
       });
   };
 
-  console.log(card);
+  const handleMessage = () => {
+    alert("click");
+  };
 
   return (
     <div className="App">
-      <div className="flex justify-center items-center font-bold text-[38px]">
+      <div className="flex flex-col justify-center items-center font-bold text-[38px]">
         <h1>TAROT GAME</h1>
+        <div>
+          <Button label="Start" value={handleMessage} />
+        </div>
       </div>
-      <main className="grid grid-cols-3 gap-2 p-4">
-        {card != undefined &&
-          card.cards.map((card, index) => {
-            return <Card card={card} key={index} />;
-          })}
-      </main>
+      <div className="flex justify-center items-center p-4">
+        <main className="grid grid-cols-2 md:grid-cols-4 md:gap-4 lg:grid-cols-5">
+          {card != undefined &&
+            card.cards.map((card, index) => {
+              return <Card card={card} key={index} />;
+            })}
+        </main>
+      </div>
     </div>
   );
 };

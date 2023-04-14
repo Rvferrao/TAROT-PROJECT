@@ -2,13 +2,12 @@ export const Card = ({ card, shown }) => {
   return (
     <div>
       {shown ? (
-        <div className="flex justify-center items-center shadow-lg  w-[160px] h-[300px] my-2 ">
+        <div className="flex justify-center items-center transition-all duration-1000 transform-origin-right -rotate-180  w-[160px] h-[300px] my-2 ">
           <img
-            className="w-[160px] h-[300px]"
+            className="w-[100%] h-[100%]"
             src={card.imageBackCard}
-            alt={"card " + card.name}
+            alt={"card " + card.name.toLowerCase()}
           />
-          <div></div>
         </div>
       ) : (
         <div className="flex justify-center items-center shadow-lg bg-blue-500 w-[160px] h-[300px] my-2  rounded-lg">
@@ -17,7 +16,6 @@ export const Card = ({ card, shown }) => {
             src={card.imageFront}
             alt={"carta: " + card.name.toLowerCase()}
           />
-          <div></div>
         </div>
       )}
     </div>

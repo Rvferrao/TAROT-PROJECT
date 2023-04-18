@@ -2,7 +2,7 @@ export const Card = ({ card, shown }) => {
   return (
     <div>
       {shown ? (
-        <div className="flex justify-center items-center transition-all duration-1000  -rotate-180  w-[160px] h-[300px] my-2 cursor-pointer">
+        <div className="flex justify-center items-center transition-all duration-1000 rounded-sm  -rotate-180  w-[160px] h-[300px] my-2 cursor-pointer">
           <img
             className="w-[100%] h-[100%]"
             src={card.imageBackCard}

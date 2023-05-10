@@ -7,7 +7,11 @@ import axios from "axios";
 export const App = () => {
   const [card, setCard] = useState();
   const [shown, setShown] = useState(false);
+  const [showContent, setShowContent] = useState(false);
   const [gameStarted, setGameStarted] = useState(false);
+  const [selectedCard, setSelectedCard] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
     handleRequest();
@@ -31,7 +35,6 @@ export const App = () => {
           card.imageFront = tarotData.imagesUrl + card.image;
           card.imageBackCard = tarotData.imageBackCard;
         });
-
         setCard(tarotData);
       })
       .catch((error) => {
@@ -42,12 +45,18 @@ export const App = () => {
   const handleControlGame = () => {
     setShown(!shown);
     setGameStarted(!gameStarted);
+    setIsClicked(false);
   };
 
   const handleStartGame = (card) => {
     const initialCards = [...card.cards];
     const newCards = shuffledCards(initialCards);
     setCard({ ...card, cards: newCards });
+  };
+
+  const handleShowCard = (name) => {
+    const newSelectedCard = card.cards.find((card) => card.name === name);
+    setSelectedCard(newSelectedCard);
   };
 
   return (
@@ -60,10 +69,24 @@ export const App = () => {
       </div>
       <div className="flex justify-center items-center p-4">
         <main className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
-          {card != undefined &&
-            card.cards.map((card, index) => {
-              return <Card card={card} key={index} shown={shown} />;
-            })}
+          {card?.cards?.map((cardItem, index) => {
+            return (
+              <Card
+                card={cardItem}
+                key={index}
+                shown={shown}
+                showContent={showContent}
+                handleShowCard={handleShowCard}
+                upCard={selectedCard}
+                index={index}
+                selectedIndex={selectedIndex}
+                setSelectedIndex={setSelectedIndex}
+                cardList={card?.cards}
+                isClicked={isClicked}
+                setIsClicked={setIsClicked}
+              />
+            );
+          })}
         </main>
       </div>
     </div>

@@ -72,16 +72,15 @@ export const App = () => {
           {card?.cards?.map((cardItem, index) => {
             return (
               <Card
-                card={cardItem}
                 key={index}
+                card={cardItem}
+                upCard={selectedCard}
                 shown={shown}
                 showContent={showContent}
                 handleShowCard={handleShowCard}
-                upCard={selectedCard}
                 index={index}
                 selectedIndex={selectedIndex}
                 setSelectedIndex={setSelectedIndex}
-                cardList={card?.cards}
                 isClicked={isClicked}
                 setIsClicked={setIsClicked}
               />

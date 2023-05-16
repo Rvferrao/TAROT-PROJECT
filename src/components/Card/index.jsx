@@ -3,7 +3,6 @@ import { CardContent } from "../CardContent";
 export const Card = ({
   card,
   shown,
-  showContent,
   upCard,
   index,
   selectedIndex,
@@ -27,7 +26,7 @@ export const Card = ({
         >
           {index === selectedIndex && isClicked ? (
             <div className="flex justify-center items-center shadow-lg bg-blue-500 w-[170px] h-[320px] my-2 rounded-lg cursor-pointer">
-              <CardContent upCard={upCard} showContent={showContent} />
+              <CardContent upCard={upCard} />
             </div>
           ) : (
             <img

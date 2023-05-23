@@ -75,17 +75,19 @@ o cypress será executado pelo navegador de sua escolha, na tela de escolha sele
 
 ### Como funciona 
 
-O primeiro teste verifica se o elemento <h1> contém o texto correto. Ele localiza o elemento através do atributo data-test e verifica se o texto "TAROT GAME" está presente, clicando no elemento em seguida.
+<p>
+  O primeiro teste verifica se o elemento <h1> contém o texto correto. Ele localiza o elemento através do atributo data-test e verifica se o texto "TAROT GAME" está presente, clicando no elemento em seguida.
 
-O segundo teste verifica se o botão principal está funcionando corretamente. Ele encontra o elemento do botão através do atributo data-test e o clica usando a opção force: true.
+  O segundo teste verifica se o botão principal está funcionando corretamente. Ele encontra o elemento do botão através do atributo data-test e o clica usando a opção force: true.
 
-Em seguida, temos um bloco describe que agrupa outros testes relacionados aos cartões do jogo. Dentro desse bloco, temos um teste que verifica se apenas um cartão está aberto, clicando no botão principal e, em seguida, clicando em um ou mais cartões.
+  Em seguida, temos um bloco describe que agrupa outros testes relacionados aos cartões do jogo. Dentro desse bloco, temos um teste que verifica se apenas um cartão está aberto, clicando no botão principal e, em seguida, clicando em um ou mais cartões.
 
-O próximo teste dentro do bloco verifica se os cliques nos cartões não os viram novamente, garantindo que os cartões não sejam abertos repetidamente.
+  O próximo teste dentro do bloco verifica se os cliques nos cartões não os viram novamente, garantindo que os cartões não sejam abertos repetidamente.
 
-Por fim, temos um teste que reinicia o jogo, clicando novamente no botão principal.
+  Por fim, temos um teste que reinicia o jogo, clicando novamente no botão principal.
 
-Esses testes permitem verificar se os elementos do aplicativo estão sendo exibidos corretamente, se as interações estão funcionando adequadamente e se o fluxo do jogo está sendo seguido corretamente. Eles ajudam a identificar problemas e garantir a qualidade do aplicativo.
+  Esses testes permitem verificar se os elementos do aplicativo estão sendo exibidos corretamente, se as interações estão funcionando adequadamente e se o fluxo do jogo está sendo seguido corretamente. Eles ajudam a identificar problemas e garantir a qualidade do aplicativo.
+</p>
 
 
 ## Aprendizados

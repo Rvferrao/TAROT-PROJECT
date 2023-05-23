@@ -76,7 +76,7 @@ o cypress será executado pelo navegador de sua escolha, na tela de escolha sele
 ### Como funciona 
 
 
-O primeiro teste verifica se o elemento <h1> contém o texto correto. Ele localiza o elemento através do atributo data-test e verifica se o texto "TAROT GAME" está presente, clicando no elemento em seguida.
+O primeiro teste verifica se o elemento h1 contém o texto correto. Ele localiza o elemento através do atributo data-test e verifica se o texto "TAROT GAME" está presente, clicando no elemento em seguida.
 
 O segundo teste verifica se o botão principal está funcionando corretamente. Ele encontra o elemento do botão através do atributo data-test e o clica usando a opção force: true.
 

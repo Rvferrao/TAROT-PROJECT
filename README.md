@@ -5,7 +5,9 @@
 &#9679; Tela de apresentação exibindo todas as cartas com seu conteúdo visível, e com um botão para iniciar o jogo.
 <br/>
 &#9679; Ao clicar no botão, as cartas deverão ser viradas - escondendo o conteúdo - e embaralhadas.
+<br/>
 &#9679; Permitir que o usuário selecione apenas uma carta, clicando na mesma.
+<br/>
 &#9679; Apresentar a carta selecionada, o nome da carta e uma descrição. (a descrição pode ser um lorem ipsum)
 
 

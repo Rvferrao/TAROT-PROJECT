@@ -1,9 +1,5 @@
 # TAROT GAME: React + Vitejs
-<style>
-h1 {
-  margin-bottom: 0;
-}
-</style>
+
 - A nossa Product Owner pensou em um produto fantástico para ser desenvolvido, e um dos desafios é criação de um jogo de Tarot.
 
 ## Requisitos:

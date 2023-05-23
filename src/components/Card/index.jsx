@@ -12,7 +12,7 @@ export const Card = ({
   setIsClicked,
 }) => {
   return (
-    <div>
+    <div data-test="card-test">
       {shown ? (
         <div
           className="flex justify-center items-center transition-all duration-[3000ms] rounded-sm -rotate-[360deg] w-[170px] h-[320px] my-2 cursor-pointer"
@@ -30,6 +30,7 @@ export const Card = ({
             </div>
           ) : (
             <img
+              data-test="image-back"
               className="w-[100%] h-[100%]"
               src={card?.imageBackCard}
               alt={"card " + card?.name.toLowerCase()}
@@ -39,6 +40,7 @@ export const Card = ({
       ) : (
         <div className="flex justify-center items-center shadow-lg bg-blue-500 w-[170px] h-[320px] my-2 rounded-lg cursor-pointer">
           <img
+            data-test="image-front"
             className="w-[140px] h-[280px]"
             src={card?.imageFront}
             alt={"carta: " + card?.name.toLowerCase()}

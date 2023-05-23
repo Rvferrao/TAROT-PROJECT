@@ -73,7 +73,7 @@ Logo após instalar verifique se o projeto está rodando e abra a ferramenta:
 
 o cypress será executado pelo navegador de sua escolha, na tela de escolha selecione a forma de teste E2E.
 
-### Como funciona 
+Como funciona 
 
 <p>
   O primeiro teste verifica se o elemento <h1> contém o texto correto. Ele localiza o elemento através do atributo data-test e verifica se o texto "TAROT GAME" está presente, clicando no elemento em seguida.

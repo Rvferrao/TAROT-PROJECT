@@ -99,12 +99,17 @@ Esses testes permitem verificar se os elementos do aplicativo estão sendo exibi
 - Testes automatizados: A implementação de testes com Cypress ajudou a garantir a qualidade do projeto.
 ## Deploy
 
-Para fazer o deploy desse projeto rode
+A plataforma escolhida foi a vercel por alguns fatores que facilitaram na hora de subir a aplicação:
 
-```bash
-  npm run deploy
-```
+-Implantação simples e automática de aplicativos web conectados a repositórios Git.
+-Escalabilidade automática para lidar com picos de tráfego.
+-Pré-renderização estática de páginas para melhorar o desempenho.
+-Integração contínua nativa para automação de testes, construções e implantações.
+-Suporte a domínios personalizados e SSL gratuito.
+-Recursos de análise e monitoramento para otimização e tomada de decisões informadas.
 
+### Link do Deploy:
+https://tarot-project-git-main-rvferrao.vercel.app/
 
 ## Autor
 
